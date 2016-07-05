@@ -29,10 +29,10 @@ module.exports = class Client extends Model {
         type: 'email',
         required: true
       },
-      role: {
+      type: {
         type: 'string',
         enum: ['owner', 'tenant', 'buyer'],
-        defaultsTo: 'owner'
+        defaultsTo: 'buyer'
       },
       info: {
         type: 'text'
