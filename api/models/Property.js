@@ -12,6 +12,23 @@ module.exports = class Property extends Model {
   }
 
   static schema () {
-
+    return {
+      info: {
+        type: 'text'
+      },
+      status: {
+        type: 'string',
+        enum: ['rented', 'sold', 'available', 'reserved'],
+        defaultsTo: 'available'
+      }/*,
+      pictures: {
+        collection: 'Picture',
+        via: 'property'
+      },*/
+      /*contacts: {
+        collection: 'Contract',
+        via: 'property'
+      }*/
+    }
   }
 }

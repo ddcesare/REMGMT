@@ -20,10 +20,10 @@ module.exports = class Owner extends Client {
 
   static schema () {
     return Object.assign({}, super.schema(), {
-      /*properties: {
+      properties: {
         collection: 'Property',
         via: 'owner'
-      }*/
+      }
     })
   }
 }
